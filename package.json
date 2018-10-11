@@ -1,0 +1,32 @@
+{
+  "name": "atocha",
+  "version": "1.0.0",
+  "main": "atocha.min.js",
+  "scripts": {
+    "build": "rollup atocha.js --name atocha --output.format umd | uglifyjs -o atocha.min.js",
+    "gzip": "echo $(gzip -c fs.min.js | wc -c) bytes",
+    "test": "npm run build && jest --coverage"
+  },
+  "keywords": ["exec", "console", "terminal"],
+  "author": "Francisco Presencia <public@francisco.io> (https://francisco.io/)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franciscop/atocha.git"
+  },
+  "bugs": {
+    "url": "https://github.com/franciscop/atocha/issues"
+  },
+  "homepage": "https://github.com/franciscop/atocha#readme",
+  "description": "Tiny exec() with magic-promises and trim()",
+  "dependencies": {
+    "magic-promises": "^1.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-preset-env": "^1.6.1",
+    "jest": "^23.5.0",
+    "uglify-es": "^3.3.9"
+  }
+}
