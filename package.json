@@ -7,7 +7,11 @@
     "gzip": "echo $(gzip -c fs.min.js | wc -c) bytes",
     "test": "npm run build && jest --coverage"
   },
-  "keywords": ["exec", "console", "terminal"],
+  "keywords": [
+    "exec",
+    "console",
+    "terminal"
+  ],
   "author": "Francisco Presencia <public@francisco.io> (https://francisco.io/)",
   "license": "MIT",
   "repository": {
