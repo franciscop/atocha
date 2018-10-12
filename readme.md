@@ -15,7 +15,7 @@ import run from 'atocha';
 
 See [magic-promises](https://github.com/franciscop/magic-promises) for that neat `.split()` just after the run.
 
-Do **not** pass unsanitized input since there's no filtering going on. Great for quick scripts, for more robust but more cumbersome syntax try [execa](https://github.com/sindresorhus/execa).
+> Note: Do **not** pass unsanitized input since there's no filtering going on. Great for quick scripts, for more robust but slightly more complex syntax try [execa](https://github.com/sindresorhus/execa).
 
 Feel free to pipe the output or perform more complex operations:
 
