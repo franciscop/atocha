@@ -6,9 +6,14 @@ Run a command in your terminal. Tiny exec() with promises and trim() for Node.js
 import cmd from 'atocha';
 
 (async () => {
-  console.log(await cmd('ls'));  // Any basic command will work
-  console.log(await cmd('ls').split('\n'));  // Not a typo; see `magic-primses`
-  console.log(await cmd('sort record.txt | uniq'));  // Can pipe
+  // Any basic command will work
+  console.log(await cmd('ls'));
+
+  // Not a typo; see `magic-primses`
+  console.log(await cmd('ls').split('\n'));
+
+  // Can pipe from/to anything as normal
+  console.log(await cmd('sort record.txt | uniq'));
 })();
 ```
 
