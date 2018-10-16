@@ -9,10 +9,10 @@ import cmd from 'atocha';
   // Any basic command will work
   console.log(await cmd('ls'));
 
-  // Not a typo; see `magic-primses`
+  // [sic] see `magic-promises`
   console.log(await cmd('ls').split('\n'));
 
-  // Can pipe from/to anything as normal
+  // Can pipe commands as normal
   console.log(await cmd('sort record.txt | uniq'));
 })();
 ```
