@@ -9,7 +9,7 @@ import cmd from 'atocha';
   // Any basic command will work
   console.log(await cmd('ls'));
 
-  // [sic] see `magic-promises`
+  // Using a better Promise interface, see the lib `swear`
   console.log(await cmd('ls').split('\n'));
 
   // Can pipe commands as normal
@@ -25,7 +25,7 @@ import cmd from 'atocha';
 - Higher max buffer. 10 MB instead of 200 KB.
 - Await/Async Promise interface works as you know and love.
 - Better error handling. `stderr` will _reject_ the promise with an error instance. Can be caught as normal with `.catch()` or `try {} catch (error) {}`.
-- Advanced [magic-promises interface](https://github.com/franciscop/magic-promises) so you can concatenate operations easily.
+- Advanced [Promise interface](https://github.com/franciscop/swear) so you can concatenate operations easily.
 - Full commands, commands with piping, etc. Note: Do **not** pass unsanitized input since there's no filtering going on. See [execa](https://github.com/sindresorhus/execa) for that.
 
 
