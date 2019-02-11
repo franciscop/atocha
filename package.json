@@ -1,6 +1,6 @@
 {
   "name": "atocha",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Tiny exec() with Promises and trim()",
   "main": "atocha.min.js",
   "scripts": {
