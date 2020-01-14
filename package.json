@@ -1,6 +1,6 @@
 {
   "name": "atocha",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Tiny exec() with Promises and trim()",
   "homepage": "https://github.com/franciscop/atocha#readme",
   "repository": "https://github.com/franciscop/atocha.git",
