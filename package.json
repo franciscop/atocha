@@ -2,12 +2,17 @@
   "name": "atocha",
   "version": "1.2.0",
   "description": "Tiny exec() with Promises and trim()",
-  "main": "atocha.min.js",
+  "homepage": "https://github.com/franciscop/atocha#readme",
+  "repository": "https://github.com/franciscop/atocha.git",
+  "bugs": "https://github.com/franciscop/atocha/issues",
+  "funding": "https://www.paypal.me/franciscopresencia/19",
+  "author": "Francisco Presencia <public@francisco.io> (https://francisco.io/)",
+  "license": "MIT",
   "scripts": {
     "build": "rollup atocha.js --name atocha --output.format umd | uglifyjs -o atocha.min.js",
     "gzip": "echo $(gzip -c fs.min.js | wc -c) bytes",
-    "pretest": "npm run build",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "watch": "jest --watch"
   },
   "keywords": [
     "exec",
@@ -16,20 +21,13 @@
     "promise",
     "promises",
     "async",
-    "await"
+    "await",
+    "cli"
   ],
-  "author": "Francisco Presencia <public@francisco.io> (https://francisco.io/)",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/franciscop/atocha.git"
-  },
-  "bugs": {
-    "url": "https://github.com/franciscop/atocha/issues"
-  },
-  "homepage": "https://github.com/franciscop/atocha#readme",
+  "main": "atocha.min.js",
+  "files": [],
   "dependencies": {
-    "swear": "^1.0.0"
+    "swear": "^1.0.4"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -38,5 +36,10 @@
     "jest": "^23.5.0",
     "rollup": "^1.1.2",
     "uglify-es": "^3.3.9"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
   }
 }
