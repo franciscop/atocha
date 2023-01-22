@@ -9,10 +9,8 @@
   "author": "Francisco Presencia <public@francisco.io> (https://francisco.io/)",
   "license": "MIT",
   "scripts": {
-    "build": "rollup atocha.js --name atocha --output.format umd | uglifyjs -o atocha.min.js",
-    "gzip": "echo $(gzip -c fs.min.js | wc -c) bytes",
-    "test": "jest --coverage",
-    "watch": "jest --watch"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
+    "start": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch"
   },
   "keywords": [
     "exec",
@@ -24,22 +22,16 @@
     "await",
     "cli"
   ],
-  "main": "atocha.min.js",
+  "main": "atocha.js",
+  "type": "module",
   "files": [],
   "dependencies": {
     "swear": "^1.0.4"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-jest": "^21.2.0",
-    "babel-preset-env": "^1.6.1",
-    "jest": "^23.5.0",
-    "rollup": "^1.1.2",
-    "uglify-es": "^3.3.9"
+    "jest": "^28.1.3"
   },
-  "babel": {
-    "presets": [
-      "env"
-    ]
+  "jest": {
+    "transform": {}
   }
 }
