@@ -1,4 +1,4 @@
-import atocha from "./atocha";
+import atocha from "./index";
 
 describe("atocha", () => {
   it("is defined", () => {
@@ -9,8 +9,8 @@ describe("atocha", () => {
     expect(await atocha("ls")).toContain("node_modules");
   });
 
-  it("uses swear()", async () => {
-    expect(await atocha("ls").split("\n")).toContain("node_modules");
+  it("can split output", async () => {
+    expect((await atocha("ls")).split("\n")).toContain("node_modules");
   });
 
   it("can handle fatal errors", async () => {
