@@ -1,3 +1,4 @@
+import { describe, expect, it } from "bun:test";
 import atocha from "./index";
 
 describe("atocha", () => {
@@ -10,7 +11,7 @@ describe("atocha", () => {
   });
 
   it("uses swear()", async () => {
-    expect(await atocha("ls").split("\n")).toContain("node_modules");
+    expect((await atocha("ls")).split("\n")).toContain("node_modules");
   });
 
   it("can handle fatal errors", async () => {

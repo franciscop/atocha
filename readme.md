@@ -1,4 +1,4 @@
-# Atocha [![npm install atocha](https://img.shields.io/badge/npm%20install-atocha-blue.svg)](https://www.npmjs.com/package/atocha)
+# Atocha [![atocha](https://img.shields.io/npm/v/atocha?label=atocha&color=greenlime)](https://www.npmjs.com/package/atocha) [![tests](https://github.com/franciscop/atocha/workflows/tests/badge.svg)](https://github.com/franciscop/atocha/actions)
 
 Run a command in your terminal. Tiny exec() with promises and trim() for Node.js:
 

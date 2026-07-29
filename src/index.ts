@@ -1,10 +1,10 @@
-import swear, { type Swear } from "swear";
+import swear from "swear";
 import { promisify } from "util";
 import { exec } from "child_process";
 
 const newExec = promisify(exec);
 
-export default (command: string, buffer = 10): Swear<string> => {
+export default (command: string, buffer = 10): Promise<string> => {
   const maxBuffer = buffer * 1024 * 1024;
   return swear(
     newExec(command, { maxBuffer }).then(({ stdout, stderr }) => {
