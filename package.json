@@ -1,6 +1,6 @@
 {
   "name": "atocha",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Tiny exec() with Promises and trim()",
   "repository": "github:franciscop/atocha",
   "author": "Francisco Presencia <public@francisco.io> (https://francisco.io/)",
