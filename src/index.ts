@@ -10,6 +10,6 @@ export default (command: string, buffer = 10): Promise<string> => {
     newExec(command, { maxBuffer }).then(({ stdout, stderr }) => {
       if (stderr) throw new Error(stderr.toString());
       return stdout.toString().trim();
-    })
+    }),
   );
 };
